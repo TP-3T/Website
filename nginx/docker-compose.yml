@@ -1,0 +1,13 @@
+services:
+  ngnix:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      # These ports are in format <host-port>:<container-port>
+      - '${PUBLIC_HTTP_PORT}:${PUBLIC_HTTP_PORT}' # Public HTTP Port
+      - '${PUBLIC_HTTPS_PORT}:${PUBLIC_HTTPS_PORT}' # Public HTTPS Port
+      - '${ADMIN_WEB_PORT}:${ADMIN_WEB_PORT}' # Admin Web Port
+
+    volumes:
+      - ${NGINX_DATA_LOCATION}:/data
+      - ${NGINX_LETSENCRYPT_LOCATION}:/etc/letsencrypt
