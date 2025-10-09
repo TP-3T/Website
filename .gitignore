@@ -1,2 +1,6 @@
 /bin
 /obj
+
+.vscode
+.env
+nginx/data/keys.json
