@@ -2,7 +2,62 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="topLevel">
+    <div id="navContainer">
+        <button id="homeButton" class="navButton selectedButton">
+            <i class="fa-solid fa-house" style="font-size: 30px;"></i>
+            Home
+        </button>
+
+        <button id="teamButton" class="navButton">
+            <i class="fa-solid fa-user-group" style="font-size: 30px;"></i>
+            Team
+        </button>
+
+        <button id="devLogButton" class="navButton">
+            <i class="fa-solid fa-code" style="font-size: 30px;"></i>
+            Dev Log
+        </button>
+
+        <button id="playButton" class="navButton">
+            <i class="fa-solid fa-play" style="font-size: 30px;"></i>
+            Play
+        </button>
+    </div>
+    <div id="brandContainer">
+        <h1 id="title">
+            </>Turn The Tides</h1>
+        <img id="logo1" src="~/img/logo1.svg" alt="Turn The Tides Logo" />
+    </div>
+    <div id="waveContainer">
+        <img id="wave" src="~/img/waves.svg" alt="Waves Transition" />
+    </div>
+    <div id=contentContainer>
+        <div class="contentSubContainerL">
+            <div class="contentHeaderL">
+                What is Turn The Tides?
+            </div>
+            <div class="contentBodyL">
+                Explanation
+            </div>
+        </div>
+        <br />
+        <div class="contentSubContainerR">
+            <div class="contentHeaderR">
+                How Do I Play?
+            </div>
+            <div class="contentBodyR">
+                Explanation
+            </div>
+        </div>
+        <br />
+        <div class="contentSubContainerL">
+            <div class="contentHeaderL">
+                What Can I Learn From It?
+            </div>
+            <div class="contentBodyL">
+                Explanation
+            </div>
+        </div>
+    </div>
 </div>
