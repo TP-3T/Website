@@ -1,0 +1,81 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<div id="topLevel">
+    <div id="navContainer">
+        <button id="homeButton" class='@GetButtonClass("Home")' @onclick='() => SetPage("Home")'>
+            <i class="fa-solid fa-house navIcon"></i>
+            <p class="navText">Home</p>
+        </button>
+
+        <button id="teamButton" class='@GetButtonClass("Team")' @onclick='() => SetPage("Team")'>
+            <i class="fa-solid fa-user-group navIcon"></i>
+            <p class="navText">Team</p>
+        </button>
+
+        <button id="devLogButton" class='@GetButtonClass("DevLog")' @onclick='() => SetPage("DevLog")'>
+            <i class="fa-solid fa-code navIcon"></i>
+            <p class="navText">Dev Log</p>
+        </button>
+
+        <button id="playButton" class='@GetButtonClass("Play")' @onclick='() => SetPage("Play")'>
+            <i class="fa-solid fa-play navIcon"></i>
+            <p class="navText">Play</p>
+        </button>
+    </div>
+    <div id="brandContainer">
+        <h1 id="title">Turn The Tides</h1>
+        <img id="logo1" src="/img/logo1.svg" alt="Turn The Tides Logo" />
+    </div>
+    <div id="waveContainer">
+        <!-- adapted from https://codepen.io/andyfitz/pen/wvxpBWL?editors=1100 -->
+        <svg id="waves" viewBox="0 0 2 1" preserveAspectRatio="none">
+            <defs>
+                <path id="wave" d="m0 1v-.5 q.5.5 1 0 t1 0 1 0 1 0 v.5z" />
+            </defs>
+            <g>
+                <use href="#wave" y=".0" fill="#94D2BD" />
+                <use href="#wave" y=".1" fill="#0A9396" />
+                <use href="#wave" y=".2" fill="#005F73" />
+            </g>
+        </svg>
+    </div>
+    <div id=contentContainer>
+        @switch (currentPage)
+        {
+            case "Home":
+                <HomeContent />
+                break;
+            case "Team":
+                <TeamContent />
+                break;
+            case "DevLog":
+                <DevLogContent />
+                break;
+            case "Play":
+                <PlayContent />
+                break;
+        }
+    </div>
+</div>
+
+@code {
+    private string currentPage = "Home";
+    private void SetPage(string page)
+    {
+        currentPage = page;
+    }
+
+    private string GetButtonClass(string page)
+    {
+        if(page == currentPage)
+        {
+            return "navButton selectedButton";
+        }
+        else
+        {
+            return "navButton";
+        }
+    }
+}

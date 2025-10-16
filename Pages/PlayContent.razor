@@ -1,0 +1,28 @@
+@inject NavigationManager NavManager
+<div class="contentSubContainer contentSubContainer--center">
+    <div class="contentHeader contentHeader--center">
+        <p>Get Turn The Tides</p>
+    </div>
+    <div id="playQuadrants">
+        <div id="steamHeader" class="half">
+            <p>Steam</p>
+        </div>
+        <div id="githubHeader" class="half">
+            <p>GitHub</p>
+        </div>
+        <button id="steamButton" class="half" @onclick='() => RedirectToExternalWebsite("https://store.steampowered.com/")'>
+            <i class="fa-brands fa-steam contentIcon"></i>
+        </button>
+        <button id="githubButton" class="half" @onclick='() => RedirectToExternalWebsite("https://github.com/")'>
+            <i class="fa-brands fa-github contentIcon"></i>
+        </button>
+    </div>
+</div>
+<br />
+
+@code {
+    private void RedirectToExternalWebsite(string url)
+    {
+        NavManager.NavigateTo(url, forceLoad: true);
+    }
+}
