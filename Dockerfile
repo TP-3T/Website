@@ -1,24 +1,20 @@
-# Use the official .NET 8 SDK image for building
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
 WORKDIR /app
+EXPOSE 80
+EXPOSE 443
 
-# Copy csproj and restore dependencies
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+WORKDIR /src
 COPY *.csproj ./
 RUN dotnet restore
-
-# Copy everything else and build
 COPY . ./
-RUN dotnet publish -c Release -o out
+WORKDIR /src
+RUN dotnet build "TurnTheTides.csproj" -c Release -o /app/build
 
-# Use the official .NET 8 runtime image for running
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+FROM build AS publish
+RUN dotnet publish "TurnTheTides.csproj" -c Release -o /app/publish
+
+FROM base AS final
 WORKDIR /app
-
-# Copy the published output from build stage
-COPY --from=build /app/out .
-
-# Expose port 80
-EXPOSE 80
-
-# Set the entry point
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "TurnTheTides.dll"]

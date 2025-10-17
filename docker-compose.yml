@@ -1,0 +1,14 @@
+services:
+  tp-3t-website:
+    image: ghcr.io/tp-3t/website:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "5480:80"
+      - "5443:443"
+    restart: unless-stopped
+    # volumes:
+    #   - "./${DATA_DIR}:/data"
+    # env_file:
+    #   - ./env
