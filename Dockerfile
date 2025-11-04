@@ -1,20 +1,17 @@
-FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
-WORKDIR /app
-EXPOSE 80
-EXPOSE 443
-
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
-COPY *.csproj ./
-RUN dotnet restore
-COPY . ./
-WORKDIR /src
-RUN dotnet build "TurnTheTides.csproj" -c Release -o /app/build
 
-FROM build AS publish
+# Copy project file
+COPY ["TurnTheTides.csproj", "./"]
+RUN dotnet restore "TurnTheTides.csproj"
+
+# Copy source code
+COPY . .
 RUN dotnet publish "TurnTheTides.csproj" -c Release -o /app/publish
 
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "TurnTheTides.dll"]
+# Use nginx to serve the static files
+FROM nginx:alpine AS final
+WORKDIR /usr/share/nginx/html
+COPY --from=build /app/publish/wwwroot .
+COPY nginx.conf /etc/nginx/nginx.conf
+EXPOSE 80
