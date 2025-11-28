@@ -1,8 +1,6 @@
 services:
   tp-3t-website:
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+    image: ghcr.io/tp-3t/website:latest
     ports:
       - "5007:80" # HTTP
     restart: unless-stopped
