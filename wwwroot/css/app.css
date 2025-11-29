@@ -170,8 +170,29 @@ p {
   color: #9B2226FF;
 }
 
+.teamIcon {
+  width: clamp(4.375rem, 10vw, 12rem);
+  height: auto;
+  float: right;
+  margin: 5%;
+}
+
+.teamIcon--right {
+  float: left;
+}
+
 .contentIcon--right {
   float: left;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.contribution {
+  margin-top: 0px;
+  font-style: italic;
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
 }
 
 #playQuadrants {
