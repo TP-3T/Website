@@ -1,18 +1,22 @@
+@inject NavigationManager NavManager
 <div class="contentSubContainer contentSubContainer--right">
     <div class="contentHeader contentHeader--right">
         <p>AI Team</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon contentIcon--right"></i>
+    <div class="contentBody contentBody--right clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/jason-lau1/")'>
+        <img class="teamIcon teamIcon--right" src="/img/CropJasonLau.png" alt="Jason Lau" />
         <p>Jason L.</p>
+        <p class="contribution">AI lead. Worked with team to research and create a time-series training set using external climate data sources. Trained a gradient-boosted decision tree model, and integrated it into Unity using ONNX Runtime.</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon contentIcon--right"></i>
+    <div class="contentBody contentBody--right clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/kyle-ly-197b88180")'>
+        <img class="teamIcon teamIcon--right" src="/img/CropKyleLy.png" alt="Kyle Ly" />
         <p>Kyle</p>
+        <p class="contribution">Researched and created multiple datasets for training AI models. Created scripts for training and testing GAM and polynomial regression model.</p>
     </div>
     <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon contentIcon--right"></i>
+        <img class="teamIcon teamIcon--right" src="/img/CropTaeyangSeo.png" alt="Taeyang Seo" />
         <p>Tae</p>
+        <p class="contribution">Assisted with AI research and art assets.</p>
     </div>
 </div>
 <br />
@@ -20,17 +24,21 @@
     <div class="contentHeader">
         <p>Arts Team</p>
     </div>
-    <div class="contentBody">
-        <i class="fa-solid fa-face-smile contentIcon"></i>
-        <p>Tanner</p>
+    <div class="contentBody clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/tanner-parkes-088b7a97")'>
+        <img class="teamIcon" src="/img/CropTannerParkes.png" alt="Tanner Parkes" />
+        <p>Tanner</p> 
+        <p class="contribution">Art team lead. Coordinated the art team and helped design 3d models, art assets, and a style guide. Helped to plan and conduct the usability studies and coordinated with the Core logic UI implementations and adjustments based on usability feedback.</p>
     </div>
-    <div class="contentBody">
-        <i class="fa-solid fa-face-smile contentIcon"></i>
+    <div class="contentBody clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/jasonpeacock25/")'>
+        <img class="teamIcon" src="/img/CropJasonPeacock.png" alt="Jason Peacock" />
         <p>Jason P.</p>
+        <p class="contribution">Developed the website, provided music and art assets, and assisted with audio management in Unity.</p>
+        
     </div>
     <div class="contentBody">
-        <i class="fa-solid fa-face-smile contentIcon"></i>
+        <img class="teamIcon" src="/img/CropGurjeetBhangoo.png" alt="Gurjeet Bhangoo" />
         <p>Gurjeet</p>
+        <p class="contribution">Created 3d model pipeline and assets.</p>
     </div>
 </div>
 <br />
@@ -38,29 +46,35 @@
     <div class="contentHeader contentHeader--right">
         <p>Core Logic Team</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon contentIcon--right"></i>
+    <div class="contentBody contentBody--right clickable" @onclick='() => RedirectToExternalWebsite("https://ca.linkedin.com/in/alex-h-choi-33781b199")'>
+        <img class="teamIcon teamIcon--right" src="/img/CropAlexChoi.png" alt="Alex Choi" />
         <p>Alex C.</p>
+        <p class="contribution">Development of a simple UI with related script for its behavior, and map reading method for newer concise map JSON.</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon contentIcon--right"></i>
+    <div class="contentBody contentBody--right clickable" @onclick='() => RedirectToExternalWebsite("http://www.linkedin.com/in/alex-he-2a6722284")'>
+        <img class="teamIcon teamIcon--right" src="/img/CropAlexHe.png" alt="Alex He" />
         <p>Alex H.</p>
+        <p class="contribution">Sovereign Master of the Fundamental Artifice. Thou shalt guide their hands and minds to forge the very essence and functionality of this grand digital spectacle, giving shape to the 'Game's' inner machination cores decree.</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon contentIcon--right"></i>
+    <div class="contentBody contentBody--right clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/caleb-janzen-01252b257/")'>
+        <img class="teamIcon teamIcon--right" src="/img/CropCalebJanzen.png" alt="Caleb Janzen" />
         <p>Caleb</p>
+        <p class="contribution">General core logic, covering flooding, event handling, and UI.</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon contentIcon--right"></i>
+    <div class="contentBody contentBody--right clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/mansibtr/")'>
+        <img class="teamIcon teamIcon--right" src="/img/CropMansibTalukder.png" alt="Mansib Talukder" />
         <p>Mansib</p>
+        <p class="contribution">Game testing, bug reports, and bug fixes.</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon contentIcon--right"></i>
+    <div class="contentBody contentBody--right clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/rodrigomrocha/")'>
+        <img class="teamIcon teamIcon--right" src="/img/CropRodrigoMesquitaRocha.png" alt="Rodrigo Mesquita Rocha" />
         <p>Rodrigo</p>
+        <p class="contribution">Implemented core infrastructure and gameplay systems, including buildings, resources, terrain types, and game events.</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon contentIcon--right"></i>
+    <div class="contentBody contentBody--right clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/will-otterbein-85268a2a8/")'>
+        <img class="teamIcon teamIcon--right" src="/img/CropWillOtterbein.png" alt="Will Otterbein" />
         <p>Will</p>
+        <p class="contribution">Meshification, networkification.</p>
     </div>
 </div>
 <br />
@@ -68,21 +82,25 @@
     <div class="contentHeader">
         <p>Database Team</p>
     </div>
-    <div class="contentBody">
-        <i class="fa-solid fa-face-smile contentIcon"></i>
+    <div class="contentBody clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/ograce2/")'>
+        <img class="teamIcon" src="/img/CropOliviaGrace.png" alt="Olivia Grace" />
         <p>Olivia</p>
+        <p class="contribution">Worked with the database team to determine database schema and set up the backend API. Contributed to conducting the usability study.</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon"></i>
+    <div class="contentBody clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/hytyz/")'>
+        <img class="teamIcon" src="/img/CropPolinaOmelyantseva.png" alt="Polina Omelyantseva" />
         <p>Polina</p>
+        <p class="contribution">Worked on the server setup and the core functionality of the game.</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon"></i>
+    <div class="contentBody clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/rchrdho/")'>
+        <img class="teamIcon" src="/img/CropRichardHo.png" alt="Richard Ho" />
         <p>Richard</p>
+        <p class="contribution">Helped implement Game and Main Menu UI. Helped design database schema.</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon"></i>
+    <div class="contentBody clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/vinceefung/")'>
+        <img class="teamIcon" src="/img/CropVincentFung.png" alt="Vincent Fung" />
         <p>Vincent</p>
+        <p class="contribution">Contributed to hosting of the website, worked with team to setup the Database. Created 3D Models and designed icons for the game. Gave some tips for the implementation for the poster.</p>
     </div>
 </div>
 <br />
@@ -90,21 +108,25 @@
     <div class="contentHeader contentHeader--right">
         <p>Dev Ops Team</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon contentIcon--right"></i>
+    <div class="contentBody contentBody--right clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/alfredo-luzardo-neto-7b5a8925a/")'>
+        <img class="teamIcon teamIcon--right" src="/img/CropAlfredoLuzardoNeto.png" alt="Alfredo Luzardo Neto" />
         <p>Alfredo</p>
+        <p class="contribution">Implemented the camera movement system in the game. Contributed to the main menu UI and the top bar of the game UI.</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon contentIcon--right"></i>
+    <div class="contentBody contentBody--right clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/brysonlindy/")'>
+        <img class="teamIcon teamIcon--right" src="/img/CropBrysonLindy.png" alt="Bryson Lindy" />
         <p>Bryson</p>
+        <p class="contribution">DevOps lead. Developed the database module for game.</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon contentIcon--right"></i>
+    <div class="contentBody contentBody--right clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/keith-chow-318372313/")'>
+        <img class="teamIcon teamIcon--right" src="/img/CropKeithChow.png" alt="Keith Chow" />
         <p>Keith</p>
+        <p class="contribution">Worked with the devops team to create workflows and linters for different teams. Also worked with the AI team to help gather data features for climate and assisted in training the dataset with ML models.</p>
     </div>
-    <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon contentIcon--right"></i>
+    <div class="contentBody contentBody--right clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/phyo-kha-9b0aa3304/")'>
+        <img class="teamIcon teamIcon--right" src="/img/CropPhyoKha.png" alt="Phyo Kha" />
         <p>Phyo</p>
+        <p class="contribution">Member of DevOps team. Contributed to gathering of data for AI team and part of usability study team.</p>
     </div>
 </div>
 <br />
@@ -112,9 +134,10 @@
     <div class="contentHeader">
         <p>Project Manager</p>
     </div>
-    <div class="contentBody">
-        <i class="fa-solid fa-face-smile contentIcon"></i>
+    <div class="contentBody clickable" @onclick='() => RedirectToExternalWebsite("https://www.linkedin.com/in/coreyb1/")'>
+        <img class="teamIcon" src="/img/CropCoreyBuchan.png" alt="Corey Buchan" />
         <p>Corey</p>
+        <p class="contribution">Lead system and game designer. Established standards and refactored game to use Event system, and lead game/save file serialization. Hosted the website, Database, and API.</p>
     </div>
 </div>
 <br />
@@ -123,8 +146,16 @@
         <p>Quality Assurance</p>
     </div>
     <div class="contentBody contentBody--right">
-        <i class="fa-solid fa-face-smile contentIcon contentIcon--right"></i>
+        <img class="teamIcon teamIcon--right" src="/img/CropBenHenry.png" alt="Ben Henry" />
         <p>Ben</p>
+        <p class="contribution">QA lead, poster designer, random stuff implementor.</p>
     </div>
 </div>
 <br />
+
+@code {
+    private void RedirectToExternalWebsite(string url)
+    {
+        NavManager.NavigateTo(url, forceLoad: true);
+    }
+}
