@@ -25,7 +25,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/tp-3t/website:latest .
+          docker build --no-cache -t ghcr.io/tp-3t/website:latest .
 
       - name: Push Docker image
         run: |
