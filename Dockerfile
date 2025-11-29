@@ -7,7 +7,8 @@ RUN dotnet restore "TurnTheTides.csproj"
 
 # Copy source code
 COPY . .
-RUN dotnet publish "TurnTheTides.csproj" -c Release -o /app/publish
+RUN dotnet clean
+RUN dotnet publish "TurnTheTides.csproj" -c Release -o /app/publish --no-restore
 
 # Use nginx to serve the static files
 FROM nginx:alpine AS final
